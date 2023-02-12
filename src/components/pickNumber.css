@@ -1,0 +1,16 @@
+.myDiv{
+    animation-name: pro;
+    animation-duration: 1s;
+}
+@keyframes pro{
+    0%{
+        position: relative;
+        opacity: 0;
+        left: calc(15%);
+    }
+    100%{
+        position: relative;
+        opacity: 1;
+        left: 0%;
+    }
+}
