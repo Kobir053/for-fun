@@ -7,6 +7,8 @@ export default function PickNumber() {
     const [next,setNext] = useState(false);
     const [divideByThree,setDivideByThree] = useState(false);
     const [divideByTwo,setDivideByTwo] = useState(false);
+    const [after_ByThree,setAfter_ByThree] = useState(false);
+    const [didnt_ByTwoAfterThree,setDidnt_ByTwoAfterThree] = useState(false);
 
     const nextStep = ()=>{
         if(next == true){
@@ -23,12 +25,42 @@ export default function PickNumber() {
         if(divideByThree == true){
             return <div className='myDiv'>
                     <h3>can you divide your number by 3 without remainder?</h3>
-                    <button onClick={()=>{}}>Yes</button>
-                    <button onClick={()=>{set()}}>No</button>
+                    <button onClick={()=>{setAfter_ByThree(true)}}>Yes</button>
+                    <button onClick={()=>{set(setDivideByThree,setDivideByTwo)}}>No</button>
                 </div>
         }
         else 
             return;
+    }
+
+    const afterDivideByThree = ()=>{
+        if(after_ByThree == true){
+            return <div className='myDiv'>
+                <h3>So do it!<br/>Now add to your number 4 :</h3>
+                <h3>After you did it, Divide your number by 2 without remainder :</h3>
+                <button onClick={()=>{setDidnt_ByTwoAfterThree(true)}}>Can't</button>
+                <button onClick={()=>{}}>Done</button>
+            </div>
+        }
+        else 
+            return;
+    }
+
+    const cannot_ByTwo = ()=>{
+        if(didnt_ByTwoAfterThree == true){
+            return <div className='myDiv'>
+                        <h3>Then add 1 to your number, and then divide it by 3 without remainder :</h3>
+                        <button onClick={()=>{theNumber(7)}}>Can't divide</button>
+                        <button onClick={()=>{theNumber(1)}}>Done</button>
+                    </div>
+        }
+        else 
+            return;
+    }
+
+    const theNumber = (num)=>{
+        alert(`the number you choosed is ${num}`);
+        return;
     }
 
     const divideByTwo_Step = ()=>{
@@ -43,9 +75,9 @@ export default function PickNumber() {
             return;
     }
 
-    const set = ()=>{
-        setDivideByThree(false);
-        setDivideByTwo(true);
+    const set = (fun1,fun2)=>{
+        fun1(false);
+        fun2(true);
         return;
     }
 
@@ -57,6 +89,8 @@ export default function PickNumber() {
             <button onClick={()=>{setNext(true)}}>Done</button>
             {nextStep()}
             {divideByThree_Step()}
+            {afterDivideByThree()}
+            {cannot_ByTwo()}
             {divideByTwo_Step()}
         </div>
     </div>
