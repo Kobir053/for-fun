@@ -22,7 +22,7 @@ export default function PickNumber() {
         if(firstStep == true){
             return <div className='myDiv'>
                 <h2>Choose a number in your head,<br/> that it's between 1 to 10 :</h2>
-                <button className='bu' onClick={()=>{set(setFirstStep,setNext)}}>Done</button>
+               <div className='buttonsDiv'><button className='bu' onClick={()=>{set(setFirstStep,setNext)}}>Done</button></div>
             </div>
         }
     }
@@ -31,7 +31,7 @@ export default function PickNumber() {
         if(next == true){
             return <div className='myDiv'>
                     <h3>Add to your number 20 :</h3>
-                    <button className='bu' onClick={()=>{set(setNext,setDivideByThree)}}>Done</button>
+                   <div className='buttonsDiv'><button className='bu' onClick={()=>{set(setNext,setDivideByThree)}}>Done</button></div> 
                 </div>
         }
         else 
@@ -42,8 +42,10 @@ export default function PickNumber() {
         if(divideByThree == true){
             return <div className='myDiv'>
                     <h3>can you divide your number by 3 without remainder?</h3>
-                    <button className='bu' onClick={()=>{set(setDivideByThree,setAfter_ByThree)}}>Yes</button>
-                    <button className='bu' onClick={()=>{set(setDivideByThree,setDivideByTwo)}}>No</button>
+                    <div className='buttonsDiv'>       
+                        <button className='bu' onClick={()=>{set(setDivideByThree,setAfter_ByThree)}}>Yes</button>
+                        <button className='bu' onClick={()=>{set(setDivideByThree,setDivideByTwo)}}>No</button>
+                    </div>
                 </div>
         }
         else 
@@ -53,10 +55,12 @@ export default function PickNumber() {
     const afterDivideByThree = ()=>{
         if(after_ByThree == true){
             return <div className='myDiv'>
-                <h3>So do it!<br/>Now add to your number 4 :</h3>
-                <h3>After you did it, Divide your number by 2 without remainder :</h3>
-                <button className='bu' onClick={()=>{set(setAfter_ByThree,setDidnt_ByTwoAfterThree)}}>Can't</button>
-                <button className='bu' onClick={()=>{set(setAfter_ByThree,setByTwoAfterThree)}}>Done</button>
+                <h3>So do it!<br/>Now add to your number 4 :<br/>
+                After you did it, Divide your number by 2 without remainder :</h3>
+                <div className='buttonsDiv'>
+                    <button className='bu' onClick={()=>{set(setAfter_ByThree,setDidnt_ByTwoAfterThree)}}>Can't</button>
+                    <button className='bu' onClick={()=>{set(setAfter_ByThree,setByTwoAfterThree)}}>Done</button>
+                </div>
             </div>
         }
         else 
@@ -67,8 +71,10 @@ export default function PickNumber() {
         if(byTwoAfterThree == true){
             return <div className='myDiv'>
                 <h3>Now divide your number by 3 without remainder :</h3>
-                <button className='bu' onClick={()=>{theNumber(10,setByTwoAfterThree)}}>Can't</button>
-                <button className='bu' onClick={()=>{theNumber(4,setByTwoAfterThree)}}>Done</button>
+                <div className='buttonsDiv'>
+                    <button className='bu' onClick={()=>{theNumber(10,setByTwoAfterThree)}}>Can't</button>
+                    <button className='bu' onClick={()=>{theNumber(4,setByTwoAfterThree)}}>Done</button>
+                </div>
             </div>
         }
     }
@@ -77,8 +83,10 @@ export default function PickNumber() {
         if(didnt_ByTwoAfterThree == true){
             return <div className='myDiv'>
                         <h3>Then add 1 to your number, and then divide it by 3 without remainder :</h3>
-                        <button className='bu' onClick={()=>{theNumber(7,setDidnt_ByTwoAfterThree)}}>Can't divide</button>
-                        <button className='bu' onClick={()=>{theNumber(1,setDidnt_ByTwoAfterThree)}}>Done</button>
+                        <div className='buttonsDiv'>
+                            <button className='bu' onClick={()=>{theNumber(7,setDidnt_ByTwoAfterThree)}}>Can't divide</button>
+                            <button className='bu' onClick={()=>{theNumber(1,setDidnt_ByTwoAfterThree)}}>Done</button>
+                        </div>
                     </div>
         }
         else 
@@ -96,8 +104,10 @@ export default function PickNumber() {
         if(divideByTwo == true){
             return <div className='myDiv'>
                     <h3>So divide it by 2 without remainder</h3>
-                    <button className='bu' onClick={()=>{set(setDivideByTwo,setAfter_ByTwo)}}>Done</button>
-                    <button className='bu' onClick={()=>{set(setDivideByTwo,setDevideByEight)}}>Can't</button>
+                    <div className='buttonsDiv'>
+                        <button className='bu' onClick={()=>{set(setDivideByTwo,setAfter_ByTwo)}}>Done</button>
+                        <button className='bu' onClick={()=>{set(setDivideByTwo,setDevideByEight)}}>Can't</button>
+                    </div>
                 </div>
         }
         else 
@@ -107,9 +117,11 @@ export default function PickNumber() {
     const afterDevideByTwo = ()=>{
         if(after_ByTwo == true){
             return <div className='myDiv'>
-                <h3>Great! <br/>Now add to your number 3 and after that divide it by 4 without remainder :</h3>
-                <button className='bu' onClick={()=>{theNumber(6,setAfter_ByTwo)}}>Done</button>
-                <button className='bu' onClick={()=>{set(setAfter_ByTwo,setDidnt_ByFourAfterTwo)}}>Can't divide</button>
+                <h3>Great! <br/>Now add to your number 3,<br/> and after that divide it by 4 without remainder :</h3>
+                <div className='buttonsDiv'>
+                    <button className='bu' onClick={()=>{theNumber(6,setAfter_ByTwo)}}>Done</button>
+                    <button className='bu' onClick={()=>{set(setAfter_ByTwo,setDidnt_ByFourAfterTwo)}}>Can't divide</button>
+                </div>
             </div>
         }
     }
@@ -118,8 +130,10 @@ export default function PickNumber() {
         if(didnt_ByFourAfterTwo == true){
             return <div className='myDiv'>
                 <h3>So divide it by 7 without remainder :</h3>
-                <button className='bu' onClick={()=>{theNumber(2,setDidnt_ByFourAfterTwo)}}>Done</button>
-                <button className='bu' onClick={()=>{theNumber(8,setDidnt_ByFourAfterTwo)}}>Can't</button>
+                <div className='buttonsDiv'>
+                    <button className='bu' onClick={()=>{theNumber(2,setDidnt_ByFourAfterTwo)}}>Done</button>
+                    <button className='bu' onClick={()=>{theNumber(8,setDidnt_ByFourAfterTwo)}}>Can't</button>
+                </div>
             </div>
         }
     }
@@ -128,8 +142,10 @@ export default function PickNumber() {
         if(devideByEight == true){
             return <div className='myDiv'>
                 <h3>So add to your number 1,<br/> and then divide it by 8 without remainder :</h3>
-                <button className='bu' onClick={()=>{theNumber(3,setDevideByEight)}}>Done</button>
-                <button className='bu' onClick={()=>{set(setDevideByEight,setDidnt_ByEight)}}>Can't divide</button>
+                <div className='buttonsDiv'>
+                    <button className='bu' onClick={()=>{theNumber(3,setDevideByEight)}}>Done</button>
+                    <button className='bu' onClick={()=>{set(setDevideByEight,setDidnt_ByEight)}}>Can't divide</button>
+                </div>
             </div>
         }
     }
@@ -138,8 +154,10 @@ export default function PickNumber() {
         if(didnt_ByEight == true){
             return <div className='myDiv'>
                 <h3>So divide it by 10 without remainder :</h3>
-                <button className='bu' onClick={()=>{theNumber(9,setDidnt_ByEight)}}>Done</button>
-                <button className='bu' onClick={()=>{theNumber(5,setDidnt_ByEight)}}>Can't</button>
+                <div className='buttonsDiv'>
+                    <button className='bu' onClick={()=>{theNumber(9,setDidnt_ByEight)}}>Done</button>
+                    <button className='bu' onClick={()=>{theNumber(5,setDidnt_ByEight)}}>Can't</button>
+                </div>
             </div>
         }
     }
