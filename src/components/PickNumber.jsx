@@ -127,7 +127,7 @@ export default function PickNumber() {
     const devideByEight_Step = ()=>{
         if(devideByEight == true){
             return <div className='myDiv'>
-                <h3>So add to your number 1 and then divide it by 8 without remainder :</h3>
+                <h3>So add to your number 1,<br/> and then divide it by 8 without remainder :</h3>
                 <button className='bu' onClick={()=>{theNumber(3,setDevideByEight)}}>Done</button>
                 <button className='bu' onClick={()=>{set(setDevideByEight,setDidnt_ByEight)}}>Can't divide</button>
             </div>
