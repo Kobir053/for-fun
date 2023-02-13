@@ -93,13 +93,6 @@ export default function PickNumber() {
             return;
     }
 
-    const theNumber = (num,func)=>{
-        alert(`the number you choosed is ${num}`);
-        func(false);
-        setFirstStep(true);
-        return;
-    }
-
     const divideByTwo_Step = ()=>{
         if(divideByTwo == true){
             return <div className='myDiv'>
@@ -162,6 +155,29 @@ export default function PickNumber() {
         }
     }
 
+    const again = ()=>{
+        setNext(false);
+        setDivideByThree(false);
+        setAfter_ByThree(false);
+        setByTwoAfterThree(false);
+        setDidnt_ByTwoAfterThree(false);
+        setDivideByTwo(false);
+        setAfter_ByTwo(false);
+        setDidnt_ByFourAfterTwo(false);
+        setDevideByEight(false);
+        setDidnt_ByEight(false);
+
+        setFirstStep(true);
+        return;
+    }
+
+    const theNumber = (num,func)=>{
+        alert(`the number you chosed is ${num}`);
+        func(false);
+        setFirstStep(true);
+        return;
+    }
+
     const set = (fun1,fun2)=>{
         fun1(false);
         fun2(true);
@@ -171,7 +187,7 @@ export default function PickNumber() {
   return (
     <div>
         <div className='divOfAll'>
-            <h1>I will tell you what's in your mind ;)</h1>
+            <h1>I will tell you what you think ;)</h1>
             <br/><br/>
             {stepOne()}
             {nextStep()}
@@ -184,6 +200,7 @@ export default function PickNumber() {
             {cannot_ByFourAfterTwo()}
             {devideByEight_Step()}
             {cannot_ByEight()}
+            <button id='again' onClick={()=>{again()}}>Play again</button>
         </div>
     </div>
   )

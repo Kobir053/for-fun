@@ -64,3 +64,15 @@ h3,h2{
 h1{
     color: rgb(226, 211, 211);
 }
+#again{
+    height: 50px;
+    width: 120px;
+    color: rgb(203, 197, 209);
+    background-color: rgb(76 7 7);
+    border: none;
+    border-radius: 12px;
+    margin-top: 50px;
+}
+#again:hover{
+    background-color: rgb(96 7 7);
+}
