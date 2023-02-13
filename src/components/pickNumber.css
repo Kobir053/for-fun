@@ -1,6 +1,11 @@
+.divOfAll{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .myDiv{
     padding-top: 7px;
-    background-color: rgb(60, 165, 38);
+    background-color: rgb(19 17 56);
     border-radius: 25px;
     width: 600px;
     height: 200px;
@@ -37,7 +42,7 @@
 .bu{
     width: 100px;
     height: 50px;
-   background-color:rgb(180, 21, 21);
+   background-color:rgb(80 57 57);
    border: none;
    margin-left: 25px;
    margin-right: 25px;
@@ -46,12 +51,16 @@
    /* margin-bottom: 8px; */
 }
 .bu:hover{
-    background-color: rgb(186, 10, 71);
+    background-color: rgb(130 57 57);
     text-decoration: underline;
-    border: orangered solid 2px;
+    border: rgb(180 57 57) solid 2px;
 }
 
 h3,h2{
     display: block;
     color: rgb(215, 223, 230);
+    margin-bottom: 20px;
+}
+h1{
+    color: rgb(226, 211, 211);
 }

@@ -170,8 +170,8 @@ export default function PickNumber() {
 
   return (
     <div>
-        <div>
-            <h1>We can know your brain ;)</h1>
+        <div className='divOfAll'>
+            <h1>I will tell you what's in your mind ;)</h1>
             <br/><br/>
             {stepOne()}
             {nextStep()}
