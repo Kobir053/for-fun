@@ -1,6 +1,15 @@
 .myDiv{
+    padding-top: 7px;
+    background-color: rgb(60, 165, 38);
+    border-radius: 25px;
+    width: 600px;
+    height: 200px;
     animation-name: pro;
-    animation-duration: 1s;
+    animation-duration: 1s; 
+    /* transform: translateY(-0.625rem);
+    transition-duration: 1s;
+    transition-delay: 0.4s;
+    transition-property: transform; */
 }
 @keyframes pro{
     0%{
@@ -13,4 +22,24 @@
         opacity: 1;
         left: 0%;
     }
+}
+.bu{
+    width: 100px;
+    height: 50px;
+   background-color:rgb(180, 21, 21);
+   border: none;
+   margin-left: 25px;
+   margin-right: 25px;
+   color: aliceblue;
+   border-radius: 5px;
+   /* margin-bottom: 8px; */
+}
+.bu:hover{
+    background-color: rgb(186, 10, 71);
+    text-decoration: underline;
+    border: orangered solid 2px;
+}
+
+h3,h2{
+    color: rgb(215, 223, 230);
 }
